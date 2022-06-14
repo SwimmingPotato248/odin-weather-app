@@ -3,3 +3,13 @@
   margin: 0;
 }
 
+#temperature::after,
+#feels-like::after,
+#min-temp::after,
+#max-temp::after {
+  content: "°C";
+}
+
+#humidity::after {
+  content: "%";
+}

@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+body {
+  background-image: url("sky-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
 #temperature::after,
 #feels-like::after,
 #min-temp::after,
@@ -12,4 +18,52 @@
 
 #humidity::after {
   content: "%";
+}
+
+#visibility::after {
+  content: 'km';
+}
+
+#wind-speed::after {
+  content: 'm/s';
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body div {
+  height: 3rem;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+input {
+  border-radius: 1rem;
+  height: 1.4rem;
+  width: 20rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+#weather-icon {
+  height: 80px;
 }

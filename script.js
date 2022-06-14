@@ -21,8 +21,6 @@ function showWeather(data) {
   setDescription(data.weather[0].main);
   setTemp(data.main.temp);
   setFeelsLike(data.main.feels_like);
-  setMinTemp(data.main.temp_min);
-  setMaxTemp(data.main.temp_max);
   setHumidity(data.main.humidity);
   setVisibility(data.visibility);
   setWindSpeed(data.wind.speed);
@@ -49,23 +47,13 @@ function setFeelsLike(temp) {
   document.getElementById("feels-like").textContent = tempCelsius.toFixed(2);
 }
 
-function setMinTemp(temp) {
-  const tempCelsius = parseFloat(temp, 10) - 273.15;
-  document.getElementById("min-temp").textContent = tempCelsius.toFixed(2);
-}
-
-function setMaxTemp(temp) {
-  const tempCelsius = parseFloat(temp, 10) - 273.15;
-  document.getElementById("max-temp").textContent = tempCelsius.toFixed(2);
-}
-
 function setHumidity(humidity) {
   document.getElementById("humidity").textContent = humidity;
 }
 
 function setVisibility(visibility) {
   document.getElementById("visibility").textContent =
-    parseInt(visibility) / 10000;
+    parseInt(visibility) / 1000;
 }
 
 function setWindSpeed(speed) {
